@@ -21,12 +21,12 @@
   (lambda (a l)
     (cond
      ((null? l) #f)
-     ((eq? (car l) a) #t)
-     (else (member? a (cdr l))))))
+     (else (or (eq? (car l) a)
+               (member? a (cdr l)))))))
 
 (member? 'a '(b c))
 ;Value: #f
-(member? 'a ('b a c))
+(member? 'a '(b a c))
 ;Value: #t
 
 (do
