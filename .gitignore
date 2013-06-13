@@ -1,0 +1,6 @@
+*.bin
+*.bci
+*.com
+*.pdf
+.vagrant
+Vagrantfile
