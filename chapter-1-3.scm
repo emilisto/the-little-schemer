@@ -112,6 +112,7 @@
 (insertL 'hating 'breaking '(i am breaking dawn))
 ; (im hatin breaking dawn)
 
+;; 4TH COMMANDMENT: Always change an argument while recurring.
 
 
 ;; Gambling and rambling
