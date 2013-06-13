@@ -73,6 +73,36 @@
 
 
 
+;; insertR
+(define insertR
+  (lambda (new old l)
+    (cond
+     ((null? l) '())
+     (else (cond
+            ((eq? (car l) old)
+             (cons old (cons new (cdr l))))
+            (else (cons
+                   (car l)
+                   (insertR new old (cdr l)))))))))
+
+(insertR '"wind at" 'breaking '(im breaking dawn))
+; (im breaking "wind at" dawn)
+
+;; insertL
+(define insertL
+  (lambda (new old l)
+    (cond
+     ((null? l) '())
+     (else (cond
+            ((eq? (car l) old)
+             (cons new l))
+            (else (cons
+                   (car l)
+                   (insertL new old (cdr l)))))))))
+
+(insertL 'hating 'breaking '(i am breaking dawn))
+; (im hatin breaking dawn)
+
 
 
 ;; Gambling and rambling
