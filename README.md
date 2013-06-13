@@ -20,3 +20,7 @@ __TODO__: make a super-dumb guide to getting setup and able to run the
 examples using Emacs and mit-scheme. It took me a few hours to get
 comfortable, and I'd love to get people started in 5 min - discovering
 this wonderful language.
+
+## Good to knows
+
+- `(ge (make-top-level-environment))` to clear the REPL environment
