@@ -15,3 +15,8 @@ and off:
 
 - I use Emacs, set up through the
 [guiding](http://clojure-doc.org/articles/tutorials/emacs.html) of the great Clojure people.
+
+__TODO__: make a super-dumb guide to getting setup and able to run the
+examples using Emacs and mit-scheme. It took me a few hours to get
+comfortable, and I'd love to get people started in 5 min - discovering
+this wonderful language.
