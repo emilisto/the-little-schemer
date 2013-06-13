@@ -10,7 +10,11 @@
 (define lat?
   (lambda (l)
     (cond
+
+; 1ST COMMANDMENT: Always ask null? as the first question in
+; expressing any function.
      ((null? l) #t)
+     
      ((atom? (car l)) (lat? (cdr l)))
      (else #f))))
 
@@ -40,7 +44,12 @@
     (cond
      ((null? l) '())
      ((eq? (car l) a) (cdr l))
-     (else (cons (car l) (rember a (cdr l)))))))
+     (else
+
+     ; 2ND COMMANDMENT: Use cons to build lists.
+     ; 3RD COMMANDMENT: When building a list, describe the first
+     ; typical element, and then cons it onto the natural recursion.
+      (cons (car l) (rember a (cdr l)))))))
 
 (rember 'fucking '(seven dirty words you cant fucking say on radio or television))
 
