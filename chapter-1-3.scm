@@ -1,10 +1,12 @@
 ; IDEA: make a test method
 
 ;; atom?: is it not a list?
-(define atom? (lambda (x) (not (pair? x))))
+(define atom? (lambda (x) (and (not (pair? x)) (not (null? x)))))
+(define list? (lambda (x) (not (atom? x))))
 
 (atom? 1)
 (atom? '(123))
+(list? '())
 
 ;; lat?: are there only atoms in a list?
 (define lat?
@@ -113,12 +115,3 @@
 ; (im hatin breaking dawn)
 
 ;; 4TH COMMANDMENT: Always change an argument while recurring.
-
-
-;; Gambling and rambling
-(do
-    (display "hello"))
-
-(null? (cdr (cdr '(bacon eggs cheese))))
-
-(car '(bacon eggs))
