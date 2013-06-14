@@ -20,6 +20,8 @@
 ;; zero, one, add1 and sub1
 ;;
 
+;;
+;; First-level primitives
 
 (define zero '())
 (define zero?
@@ -39,6 +41,9 @@
 ;; We now proceed to define some common arithmetic operations, using
 ;; _only_ the previously defined operations, and logic (i.e. the cond
 ;; form)
+
+;;
+;; Second-level primitives
 
 (define +
   (lambda (a b)
@@ -67,8 +72,14 @@
      (else (* a (pow a (sub1 b)))))))
 
 
+;;
 ;; Functions for creating numbers from a decimal-digit representation.
 
+;; I'd like to define this by giving a sequence of atoms (numbers),
+;; which defines their order, and then have the base deduced from the
+;; length of this list, and each digits corresponding number defined
+;; by its position in the list. This would allow for trivial
+;; implementation of all sorts of number representations.
 (define from-digit
   (lambda (digit)
     (cond
